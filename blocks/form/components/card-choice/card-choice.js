@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../../../scripts/aem.js';
 import { subscribe } from '../../rules/index.js';
- 
- 
+
+
 function createCard(element, enums) {
   element.querySelectorAll('.radio-wrapper').forEach((radioWrapper, index) => {
     if (enums[index]?.name) {
@@ -13,10 +13,11 @@ function createCard(element, enums) {
       label.textContent = enums[index]?.name;
     }
     radioWrapper.querySelector('input').dataset.index = index;
-    const image = createOptimizedPicture(enums[index].image || 'https://main--afb--jalagari.aem.page/lab/images/card.png', 'card-image');
+    const image = createOptimizedPicture(enums[index].image || 'https://main--afb--jalagari.hlx.page/lab/images/card.png', 'card-image');
    radioWrapper.appendChild(image);
   });
 }
+
 export default function decorate(element, fieldJson, container, formId) {
     element.classList.add('card');
     createCard(element, fieldJson.enum);
@@ -29,7 +30,7 @@ export default function decorate(element, fieldJson, container, formId) {
                 }
             });
         });
- 
+
         element.addEventListener('change', (e) => {
             e.stopPropagation();
             const value = fieldModel.enum?.[parseInt(e.target.dataset.index, 10)];

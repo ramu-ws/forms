@@ -58,7 +58,7 @@ function maskMobileNumber(mobileNumber) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, submitFormArrayToString, maskMobileNumber,
+  getFullName, days, submitFormArrayToString, maskMobileNumber,masktheMobileNumber
 };
 
 /**
@@ -66,7 +66,7 @@ export {
 * @param {*} mobileNumber
 * @returns {string} returns the mobile number with first 5 digits masked
 */
-function maskMobileNumber(mobileNumber) {
+function masktheMobileNumber(mobileNumber) {
 if (!mobileNumber) {
 return '';
 }
