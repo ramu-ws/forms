@@ -51,6 +51,9 @@
         },
         {
           "...": "../blocks/form/components/cards/_cards.json#/definitions"
+        },
+        {
+          "...": "../blocks/form/components/newCards/_newCards.json#/definitions"
         }
       ]
     }

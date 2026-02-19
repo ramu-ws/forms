@@ -224,7 +224,8 @@
         "range",
         "card-choice",
         "custom_cards",
-        "cards"
+        "cards",
+        "newCards"
       ]
     }
   ]
